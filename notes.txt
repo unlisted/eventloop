@@ -1,0 +1,10 @@
+processor
+- maintains queue
+- when queue is not empty process event
+
+event
+- stores timestamp and some string
+- writes timestamp to log file
+
+
+
