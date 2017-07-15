@@ -11,7 +11,6 @@ public:
   void operator()();
 
 private:
-  // ts
   std::chrono::system_clock::time_point _ts;
   std::string _payload;
 };
