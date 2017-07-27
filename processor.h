@@ -1,21 +1,23 @@
 #pragma once
 
-#include <queue>
+//#include <queue>
 #include <thread>
+
+#include "synch_queue.h"
 
 namespace  eventloop {
 class Event;
 
 class Processor {
 public:
-    Processor(std::queue<Event> &q);
+    Processor(SynchEventQueue &q);
     void Run();
     void Stop();
 
     ~Processor();
 
 private:
-    std::queue<Event> &_q;
+    SynchEventQueue &_q;
     std::thread _t;
     bool _isRunning = false;
 
